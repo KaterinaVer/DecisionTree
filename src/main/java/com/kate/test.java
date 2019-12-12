@@ -77,7 +77,7 @@ public class test implements Serializable{
 	    // Validation data
 	    @SuppressWarnings("serial")
 		JavaRDD<LabeledPoint> testLabeledPoints = test.map(
-				(Function<Row, LabeledPoint>) row -> new LabeledPoint(row.getInt(2), // creditability
+				(Function<Row, LabeledPoint>) row -> new LabeledPoint(row.getDouble(2), // creditability
 					Vectors.dense(
 							row.getInt(0),
 							row.getInt(1)
